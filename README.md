@@ -1,1 +1,1 @@
-wikipedia-golf-theta.vercel.app
+https://wikipedia-golf-theta.vercel.app/Golf
