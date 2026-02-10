@@ -1,11 +1,8 @@
 "use client";
 
-export const dynamic = "force-dynamic";
-
 import { useRouter, useSearchParams } from "next/navigation";
 import { GoalModal } from "@/components/GoalModal";
 import { Suspense } from "react";
-
 
 function PreviewModalContent() {
   const router = useRouter();
@@ -33,3 +30,6 @@ export default function PreviewModal() {
     </Suspense>
   );
 }
+
+// dynamic設定を最後に移動
+export const dynamic = "force-dynamic";
