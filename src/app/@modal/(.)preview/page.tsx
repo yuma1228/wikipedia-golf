@@ -30,6 +30,3 @@ export default function PreviewModal() {
     </Suspense>
   );
 }
-
-// dynamic設定を最後に移動
-export const dynamic = "force-dynamic";
