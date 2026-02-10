@@ -1,11 +1,11 @@
 "use client";
 
-import { Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { GoalModal } from "@/components/GoalModal";
+import { Suspense } from "react";
 
-// 1. useSearchParamsを使う部分を別コンポーネントに切り出す
-function PreviewContent() {
+
+function PreviewModalContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const goal = searchParams.get("goal") || "";
@@ -24,11 +24,10 @@ function PreviewContent() {
   );
 }
 
-// 2. メインコンポーネントでSuspenseを使って囲む
 export default function PreviewModal() {
   return (
     <Suspense fallback={null}>
-      <PreviewContent />
+      <PreviewModalContent />
     </Suspense>
   );
 }
